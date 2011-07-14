@@ -1,0 +1,96 @@
+/* 
+
+General reset 
+
+*/
+
+* {font-size:100%;font-family:inherit;margin:0;font-weight:normal;vertical-align:baseline;}
+
+/* aka *:not(input,textarea,select,button) */
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,embed,
+figure,figcaption,footer,header,hgroup,
+menu,nav,output,ruby,section,summary,
+time,mark,audio,video {padding:0;border:0;}
+
+blockquote:before,blockquote:after,q:before,q:after  {content:"";}
+blockquote,q {quotes:none;}
+
+table {border-collapse:collapse;border-spacing:0;}
+ul,ol {list-style:none;}
+
+/* Explicitly set HTML5 display-roles */
+article,aside,details,figcaption,figure, 
+footer,header,hgroup,menu,nav,section {display:block;}
+
+/* Make IE defaults more consistent with other browsers */
+textarea {overflow-y:auto;} 
+img {-ms-interpolation-mode:bicubic;}
+
+/* Minimize outlining */
+a:active {outline:0;}
+
+/* Remove unpredictable webkit styling */
+input[type="search"] {-webkit-appearance:none;}
+
+/* Make window scrollbar persist to avoid shifting when moving between pages */
+html {overflow-y:scroll;}
+
+/* Some preset */
+b,strong {font-weight:bold;}
+i,em {font-style:italic;}
+
+/* Explicitly set body background/foreground color and line-height to conventional values */
+body {background:#fff;color:#000;line-height:1.2;}
+
+
+/*
+
+Utility classes:
+Top level generic classes
+
+*/ 
+
+/* hide elements in a way that keeps them screen-reader accessible */
+.hide {
+	position:absolute!important;
+	height:1px!important; 
+	width:1px!important; 
+	overflow:hidden;
+	clip:rect(1px,1px,1px,1px);
+	clip:*rect(1px 1px 1px 1px);
+}
+
+/* hide elements visually and for screen-readers */
+.void {display:none!important;visibility:hidden!important;}
+
+/* old clear-fix style float clearing */
+.row:after, .cf:after {content:".";display:block;height:0;clear:both;visibility:hidden;} 
+.row, .cf {*zoom:1;}
+
+.tl {text-align:left;}
+.tr {text-align:right;}
+.tc {text-align:center;}
+
+.fl {float:left;}
+.fr {float:right;}
+
+
+@font-face {
+	font-family: 'rokkitt';
+	src: url('../fonts/Rokkitt-webfont.eot');
+	src: url('../fonts/Rokkitt-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Rokkitt-webfont.woff') format('woff'),
+	url('../fonts/Rokkitt-webfont.ttf') format('truetype'),
+	url('../fonts/Rokkitt-webfont.svg#RokkittRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
